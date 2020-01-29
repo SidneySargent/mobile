@@ -16,14 +16,6 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        if(savedInstanceState != null){
-            String pseudo = savedInstanceState.getString("cle");
-            String mdp = savedInstanceState.getString("cle2");
-            EditText txt = (EditText) findViewById(R.id.editTxtValeur);
-            txt.setText(pseudo);
-            EditText tx = (EditText) findViewById(R.id.editTxtValeur2);
-            tx.setText(mdp);
-        }
     }
 
     @Override
@@ -71,18 +63,5 @@ public class Main2Activity extends AppCompatActivity {
         super.onPause();
         //popUp("onPause()");
 
-    }
-
-
-    public void onSaveInstanceState(Bundle savedInstanceState){
-        super.onSaveInstanceState(savedInstanceState);
-        popUp("SAVEINSTANCE");
-        EditText edit = (EditText) findViewById(R.id.editTxtValeur);
-        popUp(edit.getText().toString());
-        savedInstanceState.putString("cle", edit.getText().toString());
-
-        EditText edit2 = (EditText) findViewById(R.id.editTxtValeur2);
-        popUp(edit2.getText().toString());
-        savedInstanceState.putString("cle2", edit.getText().toString());
     }
 }

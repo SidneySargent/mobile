@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences("cycle_vie_prefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("valeur", getTxtValeur());
+        editor.putString("valeur2", getTxtValeur2());
         editor.commit();
     }
     /** ==============================================================
@@ -118,12 +119,18 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(v.getContext(), Main2Activity.class);
+            //intent.putExtra("cle",);
             startActivity(intent);
         }
     };
 
     public String getTxtValeur() {
         EditText zoneValeur = (EditText) findViewById(R.id.editTxtValeur);
+        return zoneValeur.getText().toString();
+    }
+
+    public String getTxtValeur2() {
+        EditText zoneValeur = (EditText) findViewById(R.id.editTxtValeur2);
         return zoneValeur.getText().toString();
     }
 
@@ -156,5 +163,4 @@ public class MainActivity extends AppCompatActivity {
         EditText zoneValeur2 = (EditText) findViewById(R.id.editTxtValeur2);
         zoneValeur2.setText(valeur2);
     }
-
 }
