@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TP4</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="action_settings">actionSettings</string>
+
+    <string name="titre_section0">Minéraux</string>
+    <string name="titre_section1">Végétaux</string>
+    <string name="titre_section2">Animaux</string>
+
+    <string name="titre1">printemps</string>
+    <string name="titre2">été</string>
+    <string name="titre3">automne</string>
+    <string name="titre4">hiver</string>
+
+</resources>
